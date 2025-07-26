@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPWA - E-Commerce PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a6fa5"/>
+</head>
+<body>
+    <header>
+        <h1>ShopPWA</h1>
+        <div class="notification-bell">
+            <button id="notifyButton">🔔</button>
+            <span class="badge hidden" id="notificationBadge">0</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Products</a></li>
+            <li><a href="#" class="nav-link">Cart (<span id="cartCount">0</span>)</a></li>
+            <li><a href="#" class="nav-link">Account</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to ShopPWA</h2>
+            <p>Your offline-friendly e-commerce experience</p>
+            <button id="installButton" class="hidden">Install App</button>
+        </section>
+
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ShopPWA. All rights reserved.</p>
+        <div class="connection-status">
+            <span id="connectionStatus">Online</span>
+        </div>
+    </footer>
+
+    <div class="notification-toast hidden" id="notificationToast">
+        <div class="toast-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
